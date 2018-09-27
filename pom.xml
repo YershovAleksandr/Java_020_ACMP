@@ -50,6 +50,13 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>com.nam.acmp_0002.Main </mainClass>>
+              </manifest>
+            </archive>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -64,7 +71,7 @@
           <artifactId>exec-maven-plugin</artifactId>
           <version>1.6.0</version>
           <configuration>
-            <mainClass>com.nam.App</mainClass>
+            <mainClass>com.nam.acmp_0002.Main</mainClass>
             <includePluginDependencies>false</includePluginDependencies>
           </configuration>
         </plugin>
