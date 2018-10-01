@@ -1,7 +1,6 @@
 package com.nam.acmp_0007;
 
 import java.io.PrintWriter;
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
@@ -15,54 +14,62 @@ public class Main {
         String[] vals = str.split(" ");
 
         for (String s : vals){
-            System.out.println("Val = " + s);
+            //System.out.println("Val = " + s);
+
+            s = checkValue(s);
+
+            //System.out.println("Val = " + s);
         }
 
-       /* BigDecimal val1 = in.nextBigDecimal();
-        BigDecimal val2 = in.nextBigDecimal();
-        BigDecimal val3 = in.nextBigDecimal();*/
 
-        //in.nextBigDecimal()
 
-        //BigDecimal bd = new BigDecimal("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111");
-
-        //bd.scaleByPowerOfTen(100);
-
-        //bd. = 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111;
-
-        //System.out.println("Bd : " + bd);
-
-//        System.out.println("Val1 : " + val1);
-//        System.out.println("Val2 : " + val2);
-//        System.out.println("Val3 : " + val3);
-
-/*        if (val1.compareTo(val2) > 0){
-            if (val1.compareTo(val3) > 0){
-                out.println(val1);
+        if (maxValue(vals[0], vals[1])){
+            if (maxValue(vals[0], vals[2])){
+                out.println(vals[0]);
             } else {
-                out.println(val3);
+                out.println(vals[2]);
             }
         } else {
-            if (val2.compareTo(val3) > 0) {
-                out.println(val2);
+            if (maxValue(vals[1], vals[2])){
+                out.println(vals[1]);
             } else {
-                out.println(val3);
+                out.println(vals[2]);
             }
-        }*/
+        }
 
         out.flush();
     }
 
     public static boolean maxValue(String val1, String val2){
         if (val1.length() > val2.length()){
-
             return true;
-
-        } else{
-
+        } else if (val1.length() < val2.length()){
             return false;
         }
+        if (val1.compareTo(val2) >= 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    public static String checkValue(String val){
 
+        boolean firstZero = true;
+
+        StringBuilder sb = new StringBuilder(val);
+
+        int index = 0;
+
+        for (int i = 0; i < val.length(); i++){
+            if (val.charAt(i) == '0' && firstZero){
+                sb.deleteCharAt(i - index);
+                index++;
+            } else {
+                firstZero = false;
+            }
+        }
+
+        return sb.toString();
     }
 }
