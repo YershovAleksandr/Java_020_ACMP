@@ -10,3 +10,4 @@ Java console applications for acmp.ru
 0007
 0008
 0009
+0010
