@@ -1,6 +1,9 @@
 package com.nam.acmp_0011;
 
 import java.io.PrintWriter;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -11,66 +14,53 @@ public class Main {
         int k = in.nextInt();
         int n = in.nextInt();
 
-
-        /*k = 1;
-        n = 3;*/
-        //1
-
-       /* k = 2;
-        n = 7;*/
-        //21
-
-/*        k = 3;
-        n = 10;*/
-        //274
-
-
-
-        //int variants = MyFunc(k, n);
-
-        //out.println(variants);
-
-        //int n = 7;
-        //int n = 10;
-
-        int sum = 0;
-
-
+        BigDecimal sum;
 
         sum = MyFunc(k, n);
 
-        //System.out.println("Result = " + sum);
-
-        out.println(sum);
+        out.println(sum.toString());
 
         out.flush();
     }
 
-    public static int MyFunc(int k, int n){
+    public static BigDecimal MyFunc(int k, int n){
 
-        if (n == 0){
-            return 1;
+
+        List<BigDecimal> steps = new ArrayList<>();
+
+
+        //steps.set(0, new BigDecimal(1));
+
+        for (int i = 0; i < n + 1; i++){
+            steps.add(new BigDecimal(0));
+            //steps.set(i, new BigDecimal(0));
         }
+        steps.set(0, new BigDecimal(1));
+        //steps[0] = BigDecimal(1);
+        /*if (n == 0){
+            return 1;
+        }*/
 
         int count = 0;
 
-        for (int i = 1; i <= Math.min(k, n); ++i){
+        for (int i = 1; i < n + 1; ++i) {
 
-            //System.out.println();
+           // int temp = 0;
+            for (int j = i - 1; j >= (i - k) && j >= 0; --j) {
 
-            count += MyFunc(k, n - i);
+                //System.out.println("MyFunc k = " + k + " n = " + (n - i));
+
+                //count += MyFunc(k, n - i);
+                //steps[i] += steps[i-j];
+
+               // int t = (i - k - 1) < 0)?0:steps[i - k - 1];
+                //steps[i] += steps[j];
+
+                steps.set(i, steps.get(i).add(steps.get(j)));
+            }
+
         }
 
-        return count;
-    }
-
-    public static long Factorial(int n){
-
-        if (n == 0){
-            return 1;
-        } else {
-            return n * Factorial(n -1);
-        }
-
+        return steps.get(n);
     }
 }
