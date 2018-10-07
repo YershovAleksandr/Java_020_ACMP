@@ -21,6 +21,8 @@ Java console applications for acmp.ru
 
 0766
 
+0773
+
 0903
 
 0942
