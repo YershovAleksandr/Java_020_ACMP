@@ -13,6 +13,8 @@ Java console applications for acmp.ru
 0010
 0011
 
+0021
+
 0025
 
 0033
