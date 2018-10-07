@@ -17,6 +17,8 @@ Java console applications for acmp.ru
 
 0108
 
+0195
+
 0766
 
 0903
