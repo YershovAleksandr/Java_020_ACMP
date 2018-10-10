@@ -29,6 +29,8 @@ Java console applications for acmp.ru
 
 0539
 
+0692
+
 0754
 0755
 
