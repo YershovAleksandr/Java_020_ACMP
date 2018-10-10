@@ -21,6 +21,8 @@ Java console applications for acmp.ru
 
 0061
 
+0092
+
 0108
 
 0195
