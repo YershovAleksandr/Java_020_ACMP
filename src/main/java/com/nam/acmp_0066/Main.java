@@ -13,7 +13,15 @@ public class Main {
         char c = in.next().charAt(0);
 
         for (int i = 0; i < keyboardChars.length(); i++){
-            //
+            if (keyboardChars.charAt(i) == c){
+                if (i < keyboardChars.length() - 1){
+                    out.println(keyboardChars.charAt(i + 1));
+                    break;
+                } else {
+                    out.println(keyboardChars.charAt(0));
+                    break;
+                }
+            }
         }
 
         out.flush();
