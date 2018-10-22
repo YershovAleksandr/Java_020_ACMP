@@ -37,6 +37,8 @@ Java console applications for acmp.ru
 
 0324
 
+0529
+
 0539
 
 0597
