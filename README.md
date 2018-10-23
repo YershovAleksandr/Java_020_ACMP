@@ -39,6 +39,8 @@ Java console applications for acmp.ru
 
 0195
 
+0233
+
 0324
 
 0504
