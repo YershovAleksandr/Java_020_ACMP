@@ -72,6 +72,7 @@ Java console applications for acmp.ru
 
 0777
 
+0818
 0819
 
 0839
