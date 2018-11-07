@@ -114,6 +114,7 @@ Java console applications for acmp.ru
 0940
 
 0942
+0943
 
 0948
 
