@@ -10,7 +10,6 @@ public class Main {
 
 
 
-
         Scanner in = new Scanner(System.in);
 
         out.flush();
