@@ -78,6 +78,8 @@ Java console applications for acmp.ru
 
 0606
 
+0637
+
 0678
 
 0685
