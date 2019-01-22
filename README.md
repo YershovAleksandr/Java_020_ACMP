@@ -105,6 +105,8 @@ Java console applications for acmp.ru
 
 0892
 
+0894
+
 0903
 
 0907
