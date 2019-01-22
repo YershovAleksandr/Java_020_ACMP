@@ -1,4 +1,4 @@
-package com.nam;
+package com.nam.acmp_0943;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
