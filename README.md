@@ -70,6 +70,8 @@ Java console applications for acmp.ru
 
 0331
 
+0496
+
 0504
 
 0529
